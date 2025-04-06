@@ -1,0 +1,14 @@
+# Ignore python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+#Ignore virtual environment folder
+venv/
+.venv/
+
+#Ignore YOLOv5's weights files 
+yolov5/*.pt 
+yolov5/
+# Ignore output directories as well 
+runs/

@@ -1,0 +1,45 @@
+1. Setup Project Directory --> done
+- create folders src, data, and models --> done
+- create requirements.txt for python dependencies, and README.md(might be this file) --> done
+2. Clone YOLOv5 Repository
+- Clone the YOLOv5 repo into your project directory --> done
+3. Install dependencies --> done
+- Use requirements.txt to list all necessary libraries
+- OpenCV
+-PyTorch
+-YOLOv5 specific packages
+- Install dependencies --> done
+4. Start with a pre-trained model  --> done
+-download one from repo 
+5. Develop Core Object Detection Functionality
+- Set up python script that initializes webcam (internal cam) to capture video frames.
+Step 1:
+Problem/Scope
+I want to detect people, small objects.
+I want to process through a live video feed
+Step 2:
+Prepare the Pre-Trained Model for Inference
+Use Pre-trained model
+smaller models peform better for real-time
+Figure out more differences before moving on ahead.
+larger models slower but better accuracy.
+Load the Model
+Set Inference Config
+Prepare Input
+Set up Preprocessing
+- Implement functionality to process each frame 
+Step 3:
+Capture video or image feed
+Run object detection on each frame using YOLOv5
+
+6. Post-process Detection Results
+- Extract bounding boxes, confidence scores, and class labels from model's predictions.
+- Apply non-maximum suppression (NMS) to filter overlapping detection (do this maybe)
+7. Visualize Detection Results
+- Draw bounding boxes, labels, confidence scores on video frames (cool part)
+- Display the processed frames with detections in real-time.
+8. Test System
+- Run object detection system with live webcam feed (IR Camera?)
+- Verify that system is correctly identifying and labeling objects in real-time.
+9. Update README.md 
+10. Deploy Application (DONE!!!)
