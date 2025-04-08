@@ -12,7 +12,7 @@
 4. Start with a pre-trained model  --> done
 -download one from repo 
 5. Develop Core Object Detection Functionality
-- Set up python script that initializes webcam (internal cam) to capture video frames.
+- Set up python script that initializes webcam (internal cam) to capture video frames. --> done
 Step 1:
 Problem/Scope
 I want to detect people, small objects.
@@ -20,18 +20,24 @@ I want to process through a live video feed
 Step 2:
 Prepare the Pre-Trained Model for Inference
 Use Pre-trained model
-smaller models peform better for real-time
+smaller models peform better for real-time --> we are choosing this
 Figure out more differences before moving on ahead.
 larger models slower but better accuracy.
-Load the Model
-Set Inference Config
+Load the Model --> done
+Set Inference Config --> done
 Prepare Input
-Set up Preprocessing
-- Implement functionality to process each frame 
+Set up Preprocessing --> having issues with understanding prepocessing and output.avi
+-Convert frame from BGR (used by openCV) to RGB (used by YOLOv5)
+-Convert frame to PyTorch tensor.
+-Normalize pixel values to range [0,1] by dividing by 255.
+-Add a batch dimension to tensor to fit YOLOv5's input requirements [1,3,H,W].
 Step 3:
-Capture video or image feed
 Run object detection on each frame using YOLOv5
-
+- I run the model on the prepocessed frame, which will perform object detection
+Step 4:
+Displaying and Saving Frame
+- Display the frame using OpenCV's imshow function, showing original frame (without overlay of detection reuslts, since I haven't drawn them on yet)
+- The processed frame (non-detections) written to the video file (demo)
 6. Post-process Detection Results
 - Extract bounding boxes, confidence scores, and class labels from model's predictions.
 - Apply non-maximum suppression (NMS) to filter overlapping detection (do this maybe)
